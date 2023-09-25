@@ -60,6 +60,10 @@ form .field input::placeholder, form .message textarea::placeholder{
     color: #bfbfbf;
 }
 
+form .field input:focus, form .message textarea:focus{
+    border: 2px solid rgb(91, 190, 226);
+}
+
 .wrapper .field i{
     position: absolute;
     left: 18px;
@@ -70,8 +74,22 @@ form .field input::placeholder, form .message textarea::placeholder{
     transform: translateY(-50%);
 }
 
+form .field input:focus ~ i {
+    color: rgb(91, 190, 226);
+}
+
 form .message{
+    position: relative;
+}
+
+form .message i{
     top: 20px;
     font-size: 20px;
+}
+
+form .message textarea{
+    min-width: 100px;
+    max-width: 100px;
+    min-height: 120px;
 
 }
