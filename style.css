@@ -13,7 +13,7 @@ body{
     min-height: 100vh;
     align-items: center;
     justify-content: center;
-    background-color: rgb(91, 190, 226);
+    background-color: rgb(155, 244, 185);
 }
 
 .wrapper{
@@ -61,7 +61,7 @@ form .field input::placeholder, form .message textarea::placeholder{
 }
 
 form .field input:focus, form .message textarea:focus{
-    border: 2px solid rgb(91, 190, 226);
+    border: 2px solid rgb(155, 244, 185);
 }
 
 .wrapper .field i{
@@ -75,7 +75,7 @@ form .field input:focus, form .message textarea:focus{
 }
 
 form .field input:focus ~ i {
-    color: rgb(91, 190, 226);
+    color: rgb(155, 244, 185);
 }
 
 form .message{
