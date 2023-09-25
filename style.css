@@ -51,7 +51,7 @@ form .message textarea{
     height: 100%;
     width: 100%;
     outline: none;
-    padding: 0 18px ;
+    padding: 0 18px 0 48px;
     font-size: 16px;
     border-radius: 5px;
     border: 1px solid #bfbfbf;
