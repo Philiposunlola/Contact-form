@@ -83,7 +83,7 @@ form .message{
 }
 
 form .message i{
-    top: 20px;
+    top: 30px;
     font-size: 20px;
 }
 
@@ -91,5 +91,6 @@ form .message textarea{
     min-width: 100px;
     max-width: 100px;
     min-height: 120px;
-
+    max-height: 300px;
+    padding: 15px 20px 0 48px;
 }
