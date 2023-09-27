@@ -82,6 +82,8 @@ form .field input:focus ~ i {
 
 form .message{
     position: relative;
+    height: 100%;
+    width: 100%;
 }
 
 form .message i{
