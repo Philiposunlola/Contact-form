@@ -48,8 +48,8 @@ form .dbl-field{
   
 form .field input, 
 form .message textarea{
-    height: 100%;
-    width: 100%;
+    height: 100px;
+    width: 100px;
     outline: none;
     padding: 0 18px 0 48px;
     font-size: 16px;
