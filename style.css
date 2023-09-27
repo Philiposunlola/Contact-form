@@ -92,7 +92,5 @@ form .message i{
 form .message textarea{
     min-width: 100px;
     max-width: 100px;
-    min-height: 120px;
-    max-height: 300px;
     padding: 15px 20px 0 48px;
 }
