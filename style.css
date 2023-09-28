@@ -60,6 +60,10 @@ form .field input::placeholder, form .message textarea::placeholder{
     color: #bfbfbf;
 }
 
+form .field input:focus, form .message textarea:focus{
+    border: 2px solid ;
+}
+
 .wrapper form i{
     position: absolute;
     left: 18px;
