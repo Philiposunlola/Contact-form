@@ -61,7 +61,7 @@ form .field input::placeholder, form .message textarea::placeholder{
 }
 
 form .field input:focus, form .message textarea:focus{
-    border: 2px solid ;
+    border: 2px solid rgb(155, 244, 185);
 }
 
 .wrapper form i{
@@ -72,6 +72,10 @@ form .field input:focus, form .message textarea:focus{
     font-size: 17px;
     pointer-events: none;
     transform: translateY(-50%);
+}
+
+form .field input:focus ~ i{
+    color:  rgb(155, 244, 185);
 }
 
 form .message{
@@ -89,24 +93,47 @@ form .message textarea{
     min-height: 120px;
     max-height: 300px;
     padding: 15px 20px 0 45px;
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    ;
 }
+
+form .button-area{
+    margin: 25px 0;
+    display: flex;
+    text-align: center;
+}
+
+.button-area button{
+    font-size: 18px;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 5px;
+    background:  rgb(155, 244, 185);
+    padding: 13px 25px;
+}
+
+.button-area span{
+    color:  rgb(155, 244, 185);
+    margin-left: 30px;
+}
+
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
  
