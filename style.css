@@ -64,6 +64,7 @@ form .message textarea::placeholder{
 
 form .field input:focus, form .message textarea:focus{
     border: 2px solid rgb(155, 244, 185);
+    width: 100%;
 }
 
 .wrapper form i{
@@ -94,6 +95,6 @@ form .message textarea{
     max-width: 100px;
     min-height: 100px;
     max-height: 200px;
-    padding: 15px 20px 0 48px;
+    padding: 15px 20px 0 48px;  
     
 }
