@@ -116,6 +116,30 @@ form .button-area{
     margin-left: 30px;
 }
 
+@media(max-width: 600px){
+    .wrapper header{
+        text-align: center;
+    }
+    form .dbl-field{
+        margin-bottom: 0px;
+        flex-direction: column;
+    }
+    .dbl-field .field{
+        width: 100px;
+        margin-bottom: 20px;
+    }
+    form .button-area{
+        flex-direction: column;
+    }
+    .button-area button{
+        width: 100px;
+    }
+    .button-area span{
+        text-align: center;
+        margin: 20px 0;
+    }
+}
+
 
     
     
