@@ -61,7 +61,7 @@ form .field input::placeholder, form .message textarea::placeholder{
 }
 
 form .field input:focus, form .message textarea:focus{
-    border: 2px solid rgb(155, 244, 185);
+    border: 2px solid rgb(117, 237, 157);
 }
 
 .wrapper form i{
@@ -75,7 +75,7 @@ form .field input:focus, form .message textarea:focus{
 }
 
 form .field input:focus ~ i{
-    color:  rgb(155, 244, 185);
+    color:   rgb(57, 226, 114);
 }
 
 form .message{
@@ -107,12 +107,12 @@ form .button-area{
     color: #fff;
     cursor: pointer;
     border-radius: 5px;
-    background:  rgb(155, 244, 185);
+    background:  rgb(57, 226, 114);
     padding: 13px 25px;
 }
 
 .button-area span{
-    color:  rgb(155, 244, 185);
+    color:   rgb(57, 226, 114);
     margin-left: 30px;
 }
 
