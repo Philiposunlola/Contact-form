@@ -10,8 +10,11 @@ form.onsubmit = (e) => {
     let xhr = new XMLHttpRequest(); // creating new xml object
     xhr.open("POST", "message.php", true); //sending post request to message.php file
     xhr.onload = ()=> { //once ajax loaded
-        if (xhr.readyState == 4 && xhr.status == 200) {
-            
+        if (xhr.readyState == 4 && xhr.status == 200) { //if ajax response status is 200 & ready status is 4 means there is no error
+            let response = xhr.response; //storing ajax response in a response varaible
+            console.log(response);
         }
     }
+    let formData = new FormData(); //creating new FormData obj. This obj is used to send form Data
+    xbr.send(formData); //sending form data
 }
