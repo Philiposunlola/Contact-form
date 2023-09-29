@@ -5,6 +5,7 @@ statusTxt = form.querySelector(".button-area span");
 
 form.onsubmit = (e) => {
     e.preventDefault(); //preventing form from submitting
+    statusTxt.style.color = "red";
     statusTxt.style.display = "block";
 
     let xhr = new XMLHttpRequest(); // creating new xml object
@@ -12,10 +13,13 @@ form.onsubmit = (e) => {
     xhr.onload = ()=> { //once ajax loaded
         if (xhr.readyState == 4 && xhr.status == 200) { //if ajax response status is 200 & ready status is 4 means there is no error
             let response = xhr.response; //storing ajax response in a response varaible
-            console.log(response);
+            //if response is an error like enter valid email address hen we'll change status color to red 
+           if (response.indexOf("Email and password field are required!") != -1 || response.indexOf("Enter a valid email address!") || response.indexOf("Sorry, failed to send your message!")) {
+                statusTxt.style.color = "red";
+           }
             statusTxt.innerText = response;
         }
     }
     let formData = new FormData(); //creating new FormData obj. This obj is used to send form Data
-    xbr.send(formData); //sending form data
+    xhr.send(formData); //sending form data
 }
