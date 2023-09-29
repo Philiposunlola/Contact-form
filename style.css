@@ -114,6 +114,7 @@ form .button-area{
 .button-area span{
     color:   rgb(57, 226, 114);
     margin-left: 30px;
+    display: none;
 }
 
 @media(max-width: 600px){
