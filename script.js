@@ -13,6 +13,7 @@ form.onsubmit = (e) => {
         if (xhr.readyState == 4 && xhr.status == 200) { //if ajax response status is 200 & ready status is 4 means there is no error
             let response = xhr.response; //storing ajax response in a response varaible
             console.log(response);
+            statusTxt.innerText = response;
         }
     }
     let formData = new FormData(); //creating new FormData obj. This obj is used to send form Data
