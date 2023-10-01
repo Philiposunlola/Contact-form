@@ -1,5 +1,9 @@
 //Contact Form in PHP
 <?php
+
+ini_set('SMTP', 'localhost');
+ini_set('smtp_port', 25);
+
   $name = htmlspecialchars($_POST['name']);
   $email = htmlspecialchars($_POST['email']);
   $phone = htmlspecialchars($_POST['phone']);
