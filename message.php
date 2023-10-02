@@ -2,7 +2,7 @@
 <?php
 
 ini_set('SMTP', 'localhost');
-ini_set('smtp_port', 25);
+ini_set('smtp_port', 587);
 
   $name = htmlspecialchars($_POST['name']);
   $email = htmlspecialchars($_POST['email']);
