@@ -3,7 +3,7 @@
 
 ini_set('SMTP', 'smtp.gmail.com');
 ini_set('smtp_port', 587);
-ini_set("sendmail_from", $email);
+ini_set("sendmail_from", "$email");
 
   $name = htmlspecialchars($_POST['name']);
   $email = htmlspecialchars($_POST['email']);
