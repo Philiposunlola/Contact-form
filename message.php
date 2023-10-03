@@ -15,7 +15,7 @@ ini_set('smtp_port', 587);
       $receiver = "iamphiliposun@gmail.com"; //enter that email address where you want to receive all messages
       $subject = "From: $name <$email>";
       $body = "Name: $name\nEmail: $email\nPhone: $phone\nWebsite: $website\n\nMessage:\n$message\n\nRegards,\n$name";
-      $sender = "From: $email";
+      $sender = "From: philiposun@gmail.com";
       if(mail($receiver, $subject, $body, $sender)){
          echo "Your message has been sent";
       }else{
