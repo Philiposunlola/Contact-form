@@ -12,7 +12,7 @@
       $subject = "From: $name <$email>";
       $body = "Name: $name\nEmail: $email\nPhone: $phone\nWebsite: $website\n\nMessage:\n$message\n\nRegards,\n$name";
       $sender = "From: philiposun@gmail.com";
-      if(mail($receiver, $subject, $body, $sender)){
+      if(mail($receiver, $subject, $body)){
          echo "Your message has been sent";
       }else{
          echo "Sorry, failed to send your message!";
