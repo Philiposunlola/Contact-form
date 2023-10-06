@@ -21,7 +21,7 @@ form.onsubmit = (e)=>{
         form.reset();
         setTimeout(()=>{
           statusTxt.style.display = "none";
-        }, 3000);
+        }, 9000);
       }
       statusTxt.innerText = response;
       form.classList.remove("disabled");
