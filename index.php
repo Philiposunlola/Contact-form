@@ -18,7 +18,7 @@
                         <i class="fas fa-user"></i>
                     </div>
                     <div class="field">
-                        <input aria-label="text" name="email" placeholder="Enter your email" required>
+                        <input aria-label="text" name="receiver_email" name="email" placeholder="Enter your email" required>
                         <i class="fas fa-envelope"></i>
                     </div>
                 </div>

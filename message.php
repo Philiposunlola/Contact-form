@@ -6,23 +6,27 @@
   $website = htmlspecialchars($_POST['website']);
   $message = htmlspecialchars($_POST['message']);
 
-  if(!empty($email) && !empty($message)){
-    if(filter_var($email, FILTER_VALIDATE_EMAIL)){
-      $receiver = "philiposun@gmail.com"; //enter that email address where you want to receive all messages
-      $subject = "From: $name <$email>";
-      $body = "Name: $name\nEmail: $email\nPhone: $phone\nWebsite: $website\n\nMessage:\n$message\n\nRegards,\n$name";
-      $sender = "From: philiposun@gmail.com";
-      if(mail($receiver, $subject, $body, $sender)){
-         echo "Your message has been sent";
-      }else{
-         echo "Sorry, failed to send your message!";
-      }
-    }else{
-      echo "Enter a valid email address!";
+  if (!empty($email) && !empty($message)) {
+    if (filter_var($email, FILTER_VALIDATE_EMAIL)) {
+        // Get the receiver's email address from the form (replace 'receiver_email' with the actual form field name)
+        $receiver = $_POST['receiver_email'];
+
+        $subject = "From: $name <$email>";
+        $body = "Name: $name\nEmail: $email\nPhone: $phone\nWebsite: $website\n\nMessage:\n$message\n\nRegards,\n$name";
+        $sender = "From: $email";
+
+        if (mail($receiver, $subject, $body, $sender)) {
+            echo "Your message has been sent";
+        } else {
+            echo "Sorry, failed to send your message!";
+        }
+    } else {
+        echo "Enter a valid email address!";
     }
-  }else{
+} else {
     echo "Email and message field is required!";
-  }
+}
+
 
     //Import PHPMailer classes into the global namespace
     //These must be at the top of your script, not inside a function
