@@ -1,7 +1,7 @@
 <?php
 
   $name = htmlspecialchars($_POST['name']);
-  $email = htmlspecialchars($_POST['email']);
+  $email = htmlspecialchars($_POST['receiver_email']);
   $phone = htmlspecialchars($_POST['phone']);
   $website = htmlspecialchars($_POST['website']);
   $message = htmlspecialchars($_POST['message']);
@@ -10,7 +10,6 @@
     if (filter_var($email, FILTER_VALIDATE_EMAIL)) {
         // Get the receiver's email address from the form (replace 'receiver_email' with the actual form field name)
         $receiver = $_POST['receiver_email'];
-
         $subject = "From: $name <$email>";
         $body = "Name: $name\nEmail: $email\nPhone: $phone\nWebsite: $website\n\nMessage:\n$message\n\nRegards,\n$name";
         $sender = "From: $email";
