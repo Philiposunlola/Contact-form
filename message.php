@@ -10,7 +10,7 @@
     if (filter_var($email, FILTER_VALIDATE_EMAIL)) {
         // Get the receiver's email address from the form (replace 'receiver_email' with the actual form field name)
         $receiver = $_POST['receiver_email'];
-        $subject = "From: $name <$email>";
+        $subject = "From: $name";
         $body = "Name: $name\nEmail: $email\nPhone: $phone\nWebsite: $website\n\nMessage:\n$message\n\nRegards,\n$name";
         $sender = "From: $email";
 
