@@ -1,20 +1,32 @@
 <?php
 
   $name = htmlspecialchars($_POST['name']);
-  $email = htmlspecialchars($_POST['receiver_email']);
+  $email = htmlspecialchars($_POST['email']);
   $phone = htmlspecialchars($_POST['phone']);
   $website = htmlspecialchars($_POST['website']);
   $message = htmlspecialchars($_POST['message']);
 
   if (!empty($email) && !empty($message)) {
     if (filter_var($email, FILTER_VALIDATE_EMAIL)) {
-        // Get the receiver's email address from the form (replace 'receiver_email' with the actual form field name)
-        $receiver = $_POST['receiver_email'];
-        $subject = "From: $name";
-        $body = "Name: $name\nEmail: $email\nPhone: $phone\nWebsite: $website\n\nMessage:\n$message\n\nRegards,\n$name";
-        $sender = "From: $email";
+        // Email recipient
+    $to = $_POST["email"];// Replace with your email address
 
-        if (mail($receiver, $subject, $body, $sender)) {
+    // Email subject
+    $subject = 'New Contact Form Submission';
+
+    // Email headers
+    $sender = "From: philiposun@gmail.com" . "\r\n";
+    $sender .= "Reply-To: $email" . "\r\n";
+    $sender .= "MIME-Version: 1.0" . "\r\n";
+    $sender .= "Content-Type: text/html; charset=UTF-8" . "\r\n";
+
+    // Email content
+    $body = "<h2>Contact Form Submission</h2>";
+    $body .= "<p><strong>Name:</strong> $name</p>";
+    $body .= "<p><strong>Email:</strong> $email</p>";
+    $body .= "<p><strong>Message:</strong> $message</p>";
+        //send email
+        if (mail($to, $subject, $body, $sender)) {
             echo "Your message has been sent";
         } else {
             echo "Sorry, failed to send your message!";
