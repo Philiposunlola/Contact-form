@@ -24,6 +24,7 @@
     $body = "<h2>Contact Form Submission</h2>";
     $body .= "<p><strong>Name:</strong> $name</p>";
     $body .= "<p><strong>Email:</strong> $email</p>";
+    $body .= "<p><strong>Website:</strong> $website</p>";
     $body .= "<p><strong>Message:</strong> $message</p>";
         //send email
         if (mail($to, $subject, $body, $sender)) {
